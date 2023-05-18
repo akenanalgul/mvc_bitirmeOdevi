@@ -1,0 +1,35 @@
+﻿@model List<MVC_StokTakipOtomasyonu2.Models.Entity.Markalar>
+@{
+    ViewBag.Title = "Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Marka Listesi</h2>
+
+<table class="table">
+    <thead style="background-color:aliceblue">
+        <tr>
+            <th>ID</th>
+            <th>Kategori</th>
+            <th>Marka</th>
+            <th>Açıklama</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+            {
+        <tr>
+            <th>
+                @item.ID
+            </th>
+            <td>@item.Kategoriler.Kategori</td>
+            <td>@item.Marka</td>
+            <td>@item.Aciklama</td>
+            <td><a href="#" class="btn btn-danger">Sil</a></td>
+            <td><a href="#" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+            }
+    </tbody>
+</table>
+<a href="/Home/MarkaEkle/"class="btn btn-success">Marka Ekle</a>

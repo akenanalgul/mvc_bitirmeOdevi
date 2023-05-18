@@ -1,0 +1,34 @@
+﻿@using MVC_StokTakipOtomasyonu2.Models.Entity
+
+@model IEnumerable<MVC_StokTakipOtomasyonu2.Models.Entity.Birimler>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Birim</td>
+            <td>Açıklama</td>
+            <td>Sil</td>
+            <td>Güncelle</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Birim</td>
+            <td>@item.Aciklama</td>
+
+            <td>
+                <a href="/Products/GüncelleBilgiGetir/@item.ID" class="btn btn-warning">Sil</a>
+            </td>
+
+            <td>
+                <a href="/Products/GüncelleBilgiGetir/@item.ID" class="btn btn-warning">Güncelle</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<a href="/Home/EkleBirim/"class="btn btn-success" style="margin-top:10px;">Birim Ekle</a>

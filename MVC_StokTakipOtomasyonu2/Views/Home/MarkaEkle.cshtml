@@ -1,0 +1,29 @@
+﻿@model MVC_StokTakipOtomasyonu2.Models.Entity.Markalar
+@{
+    ViewBag.Title = "MarkaEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Marka Ekleme</h2>
+
+<div class="container">
+    @using (Html.BeginForm("MarkaEkle", "Home", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.LabelFor(x => x.Kategoriler.Kategori)
+            @Html.DropDownListFor(x=>x.KategoriID, (List<SelectListItem>)ViewBag.l , "---Seçiniz---", new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Marka)
+            @Html.TextAreaFor(x=>x.Marka,new {@class="form-control"} )
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Aciklama)
+            @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+        </div>
+        <div>
+            <button class="btn btn-success">Marka Ekle</button>
+        </div>
+    }
+</div>
+
