@@ -3,33 +3,39 @@
     ViewBag.Title = "Store";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Marka Listesi</h2>
 
-<table class="table">
+
+<table class="table table-bordered">
     <thead style="background-color:aliceblue">
         <tr>
             <th>ID</th>
             <th>Kategori</th>
             <th>Marka</th>
             <th>Açıklama</th>
-            <th></th>
-            <th></th>
+            <th>Sil</th>
+            <th>Güncelle</th>
         </tr>
     </thead>
     <tbody>
-        @foreach(var item in Model)
-            {
+        @foreach (var item in Model)
+        {
+    <thead style="background-color:lightsteelblue">
         <tr>
+
+
             <th>
                 @item.ID
             </th>
             <td>@item.Kategoriler.Kategori</td>
             <td>@item.Marka</td>
             <td>@item.Aciklama</td>
-            <td><a href="#" class="btn btn-danger">Sil</a></td>
-            <td><a href="#" class="btn btn-primary">Güncelle</a></td>
+            <td><a href="/Home/SilMarka/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Home/GuncelleMarka/@item.ID" class="btn btn-primary">Güncelle</a></td>
+
+
         </tr>
-            }
-    </tbody>
-</table>
+    </thead>
+    }
+        </tbody>
+    </table>
 <a href="/Home/MarkaEkle/"class="btn btn-success">Marka Ekle</a>

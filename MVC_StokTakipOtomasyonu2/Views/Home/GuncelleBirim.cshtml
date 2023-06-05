@@ -1,0 +1,28 @@
+﻿@model MVC_StokTakipOtomasyonu2.Models.Entity.Birimler
+@{
+    ViewBag.Title = "GuncelleBirim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Birim Güncelle</h2>
+
+<div class="container">
+    <form action="/Home/GuncelleBirim2/">
+        <div class="form-group">
+            <b>ID</b>
+            @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <b>Birim</b>
+            @Html.TextBoxFor(x => x.Birim, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <b>Aciklama</b>
+            @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+        </div>
+        <div><button class="btn btn-primary">Birim Güncelle</button></div>
+
+    </form>
+</div>
+
+

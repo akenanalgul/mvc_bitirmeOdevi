@@ -75,6 +75,31 @@ namespace MVC_StokTakipOtomasyonu2.Controllers
             db.SaveChanges();
             return RedirectToAction("Products");
         }
+        public ActionResult SilBirim(Birimler p)
+        {
+            var model = db.Birimler.Find(p.ID);
+            if (model == null) return HttpNotFound();
+            return View(model);
+        }
+
+        public ActionResult SilBirim2(Birimler p)
+        {
+            db.Entry(p).State = System.Data.Entity.EntityState.Deleted;
+            db.SaveChanges();
+            return RedirectToAction("Products");
+        }
+        public ActionResult GuncelleBirim(Birimler p)
+        {
+            var model = db.Birimler.Find(p.ID);
+            if (model == null) return HttpNotFound();
+            return View(model);
+        }
+        public ActionResult GuncelleBirim2(Birimler p)
+        {
+            db.Entry(p).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Products");
+        }
 
 
 
@@ -109,5 +134,33 @@ namespace MVC_StokTakipOtomasyonu2.Controllers
             db.SaveChanges();
             return RedirectToAction("Store");
         }
+
+        public ActionResult SilMarka(Markalar p)
+        {
+            var model = db.Markalar.Find(p.ID);
+            if (model == null) return HttpNotFound();
+            return View(model);
+        }
+
+        public ActionResult SilMarka2(Markalar p)
+        {
+            db.Entry(p).State = System.Data.Entity.EntityState.Deleted;
+            db.SaveChanges();
+            return RedirectToAction("Store");
+        }
+        public ActionResult GuncelleMarka(Markalar p)
+        {
+            var model = db.Markalar.Find(p.ID);
+            if (model == null) return HttpNotFound();
+            return View(model);
+        }
+        public ActionResult GuncelleMarka2(Markalar p)
+        {
+            db.Entry(p).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Store");
+        }
+
+
     }
 }

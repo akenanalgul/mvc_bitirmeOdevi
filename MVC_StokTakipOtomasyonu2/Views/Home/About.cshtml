@@ -3,7 +3,7 @@
 @model List<MVC_StokTakipOtomasyonu2.Models.Entity.Kategoriler>
 
 <table class="table table-bordered">
-    <thead>
+    <thead style="background-color:aliceblue">
         <tr>
             <td>ID</td>
             <td>Kategori</td>
@@ -16,14 +16,16 @@
 
         @foreach (var item in Model)
         {
-            <tr>
-                <td>@item.ID</td>
-                <td>@item.Kategori</td>
-                <td>@item.Aciklama</td>
-                <td><a href="/Home/SilBilgiGetir/@item.ID" class="btn btn-danger">Sil</a></td>
-                <td><a href="/Home/GuncelleBilgiGetir/@item.ID" class="btn btn-warning">Güncelle</a></td>
+    <thead style="background-color: lightsteelblue">
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Kategori</td>
+            <td>@item.Aciklama</td>
+            <td><a href="/Home/SilBilgiGetir/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Home/GuncelleBilgiGetir/@item.ID" class="btn btn-warning">Güncelle</a></td>
 
-            </tr>
+        </tr>
+    </thead>
 
         }
 

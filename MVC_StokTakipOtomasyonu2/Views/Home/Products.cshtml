@@ -3,7 +3,7 @@
 @model IEnumerable<MVC_StokTakipOtomasyonu2.Models.Entity.Birimler>
 
 <table class="table table-bordered">
-    <thead>
+    <thead style="background-color:aliceblue">
         <tr>
             <td>ID</td>
             <td>Birim</td>
@@ -15,20 +15,21 @@
     <tbody>
         @foreach (var item in Model)
         {
+    <thead style="background-color:lightsteelblue">
         <tr>
+
             <td>@item.ID</td>
             <td>@item.Birim</td>
             <td>@item.Aciklama</td>
 
-            <td>
-                <a href="/Products/GüncelleBilgiGetir/@item.ID" class="btn btn-warning">Sil</a>
-            </td>
+            <td><a href="/Home/SilBirim/@item.ID" class="btn btn-danger">Sil</a></td>
 
-            <td>
-                <a href="/Products/GüncelleBilgiGetir/@item.ID" class="btn btn-warning">Güncelle</a>
-            </td>
+            <td><a href="/Home/GuncelleBirim/@item.ID" class="btn btn-warning">Güncelle</a></td>
+
         </tr>
-        }
-    </tbody>
-</table>
+    </thead>
+
+    }
+        </tbody>
+    </table>
 <a href="/Home/EkleBirim/"class="btn btn-success" style="margin-top:10px;">Birim Ekle</a>

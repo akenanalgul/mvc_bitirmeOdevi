@@ -244,6 +244,10 @@
     <Content Include="Views\Home\Store.cshtml" />
     <Content Include="Views\Home\MarkaEkle.cshtml" />
     <Content Include="Views\Home\SilBilgiGetir.cshtml" />
+    <Content Include="Views\Home\SilBirim.cshtml" />
+    <Content Include="Views\Home\GuncelleBirim.cshtml" />
+    <Content Include="Views\Home\SilMarka.cshtml" />
+    <Content Include="Views\Home\GuncelleMarka.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

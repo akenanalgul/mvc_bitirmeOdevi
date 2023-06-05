@@ -1,0 +1,36 @@
+﻿
+@model MVC_StokTakipOtomasyonu2.Models.Entity.Markalar
+@{
+    ViewBag.Title = "SilMarka";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Marka Silme Sayfası</h2>
+
+<div class="container">
+    @using (Html.BeginForm("SilMarka2", "Home"))
+    {
+        <h1></h1>
+        <h4>Kayıt Silinsin mi?</h4>
+        <div class="form-group">
+            @Html.HiddenFor(x => x.ID)
+            @Html.LabelFor(x => x.Kategoriler.Kategori)
+            @Html.DisplayFor(x => x.Kategoriler.Kategori, new { @class = "form-control" })
+        </div>
+        <div>
+            @Html.LabelFor(x => x.Marka)
+            @Html.DisplayFor(x => x.Marka, new { @class = "form-control" })
+        </div>
+        <div>
+            @Html.LabelFor(x => x.Aciklama)
+            @Html.DisplayFor(x => x.Aciklama, new { @class = "form-control" })
+        </div>
+
+        <div>
+            <button class="btn btn-danger">Marka Sil</button>
+            <a href="/Markalar/Store">Ana Sayfa</a>
+        </div>
+    }
+
+</div>
+
