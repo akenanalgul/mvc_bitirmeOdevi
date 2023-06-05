@@ -44,6 +44,19 @@ namespace MVC_StokTakipOtomasyonu2.Controllers
             return RedirectToAction("About");
         }
 
+        public ActionResult SilBilgiGetir(Kategoriler p)
+        {
+            var model = db.Kategoriler.Find(p.ID);
+            if (model == null) return HttpNotFound();
+            return View(model);
+        }
+        public ActionResult Sil(Kategoriler p)
+        {
+            db.Entry(p).State = System.Data.Entity.EntityState.Deleted;
+            db.SaveChanges();
+            return RedirectToAction("About");
+        }
+
         
         public ActionResult Products()
         {
@@ -62,6 +75,10 @@ namespace MVC_StokTakipOtomasyonu2.Controllers
             db.SaveChanges();
             return RedirectToAction("Products");
         }
+
+
+
+
         public ActionResult Store()
         {
 

@@ -1,27 +1,26 @@
-﻿
+﻿@model MVC_StokTakipOtomasyonu2.Models.Entity.Kategoriler
 @{
     ViewBag.Title = "Ekle";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2 style="color:red;">Kategori Ekleme</h2>
-<div class="container">
-    <form action="/Home/Ekle2/">
+<h2>Kategori Ekleme</h2>
 
+<div class="container">
+    @using (Html.BeginForm("Ekle2", "Home", FormMethod.Post))
+    {
         <div class="form-group">
-            <label style="color:red;">Kategori</label>
-            <input type="text" name="Kategori" class="form-control" />
+            @Html.LabelFor(x => x.Kategori)
+            @Html.TextBoxFor(x => x.Kategori, new { @class = "form-control" })
         </div>
         <div class="form-group">
-            <label style="color:red;">Açıklama</label>
-            <textarea name="Aciklama" class="form-control" ></textarea>
+            @Html.LabelFor(x => x.Aciklama)
+            @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
         </div>
         <div class="form-group">
             <button class="btn btn-success">Kategori Ekle</button>
         </div>
-
-
-    </form>
-
+    }
 </div>
+
 
