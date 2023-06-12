@@ -16,6 +16,8 @@
                 <li class="nav-item @Html.ActivePage("Home","About") px-lg-4"><a class="nav-link text-uppercase" href="/Home/About">Kategoriler</a></li>
                 <li class="nav-item @Html.ActivePage("Home","Products") px-lg-4"><a class="nav-link text-uppercase" href="/Home/Products">Birimler</a></li>
                 <li class="nav-item @Html.ActivePage("Home","Store") px-lg-4"><a class="nav-link text-uppercase" href="/Home/Store">Markalar</a></li>
+                <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/Kullanicilar/Logout">Çıkış</a></li>
+                <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" style="color:ActiveBorder">@User.Identity.Name</a></li>
             </ul>
         </div>
     </div>

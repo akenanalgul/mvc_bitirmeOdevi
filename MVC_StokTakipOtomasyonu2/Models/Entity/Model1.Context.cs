@@ -33,5 +33,6 @@ namespace MVC_StokTakipOtomasyonu2.Models.Entity
         public virtual DbSet<Sepet> Sepet { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Urunler> Urunler { get; set; }
+        public virtual DbSet<Kullanicilar> Kullanicilar { get; set; }
     }
 }

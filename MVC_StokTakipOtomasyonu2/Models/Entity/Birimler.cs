@@ -19,11 +19,11 @@ namespace MVC_StokTakipOtomasyonu2.Models.Entity
         {
             this.Urunler = new HashSet<Urunler>();
         }
-    
+
         public int ID { get; set; }
         public string Birim { get; set; }
         public string Aciklama { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Urunler> Urunler { get; set; }
     }

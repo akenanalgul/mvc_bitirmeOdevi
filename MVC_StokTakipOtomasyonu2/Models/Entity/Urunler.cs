@@ -20,7 +20,7 @@ namespace MVC_StokTakipOtomasyonu2.Models.Entity
             this.Satislar = new HashSet<Satislar>();
             this.Sepet = new HashSet<Sepet>();
         }
-    
+
         public int ID { get; set; }
         public int KategoriID { get; set; }
         public int MarkaID { get; set; }
@@ -32,7 +32,7 @@ namespace MVC_StokTakipOtomasyonu2.Models.Entity
         public int BirimID { get; set; }
         public System.DateTime Tarih { get; set; }
         public string Aciklama { get; set; }
-    
+
         public virtual Birimler Birimler { get; set; }
         public virtual Kategoriler Kategoriler { get; set; }
         public virtual Markalar Markalar { get; set; }

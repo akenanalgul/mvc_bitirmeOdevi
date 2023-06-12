@@ -7,6 +7,7 @@ using MVC_StokTakipOtomasyonu2.Models.Entity;
 
 namespace MVC_StokTakipOtomasyonu2.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         MVC_StokTakipEntities db = new MVC_StokTakipEntities();

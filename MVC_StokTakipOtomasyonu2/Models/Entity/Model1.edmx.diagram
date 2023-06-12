@@ -19,6 +19,7 @@
         <AssociationConnector Association="MVC_StokTakipModel.FK_Urunler_Markalar" ManuallyRouted="false" />
         <AssociationConnector Association="MVC_StokTakipModel.FK_Satislar_Urunler" ManuallyRouted="false" />
         <AssociationConnector Association="MVC_StokTakipModel.FK_Sepet_Urunler" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MVC_StokTakipModel.Kullanicilar" Width="1.5" PointX="5.375" PointY="9.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
